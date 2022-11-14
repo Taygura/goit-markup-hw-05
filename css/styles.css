@@ -53,8 +53,6 @@ p {
 /* header */
 
 .page-header .container {
-  padding-top: 24px;
-  padding-bottom: 25px;
   display: flex;
   align-items: center;
   background-color: #ffffff;
@@ -69,13 +67,20 @@ p {
 .page-list .header-list{
   position: relative;
 }
-.header-list .header-list-item {
+
+.header-list-item {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
   color: black;
   margin-right: 50px;
+  padding: 32px 0;
+  display: block;
+}
+.active-link{
+  color: var(--header-hover);
+  border-bottom: 4px solid var(--header-hover);
 }
 .hover-tup:hover,
 .hover-tup:focus {
@@ -97,6 +102,7 @@ p {
   color: black;
   margin-right: 50px;
 }
+
 .header-contakts {
   margin-left: auto;
   justify-content: center;
@@ -749,7 +755,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   right: 10px;
   width: 30px;
   height: 30px;
-  border: 1px solid #000000;
+  background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
 
