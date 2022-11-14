@@ -30,7 +30,7 @@
             <li class="page-list">
               <a class="header-list-item header-2nd hover-tup" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="page-list"><a class="header-list-item hover-tup" href="./contacts.html">Контакти</a></li>
+            <li class="page-list"><a class="header-list-item hedear-3d hover-tup" href="./contacts.html">Контакти</a></li>
           </ul>
         </div>
         <div class="header-contakts">
@@ -59,7 +59,7 @@
       <section class="hero">
           <div class="hero-container">
             <h1 class="hero-section">ЕФЕКТИВНІШІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-            <button class="hero-button only-this-butoon hover-butoon butoon" type="button">Замовити послугу</button>
+            <button class="hero-button only-this-butoon hover-butoon butoon" data-modal-open type="button">Замовити послугу</button>
           </div>
       </section>
       <section class="proda">
@@ -377,5 +377,15 @@
         </div>
       </div>
     </footer>
+    <div class="modal-backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="close-sign" data-modal-close>
+          <svg>
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -80,13 +80,13 @@ p {
 .hover-tup:hover,
 .hover-tup:focus {
   color: var(--header-hover);
-  transition: color 250ms 
+  transition: 250ms
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-tup:hover .icon,
 .hover-tup:focus .icon {
   stroke: var(--header-hover);
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contakts .header-list-item {
@@ -162,7 +162,7 @@ p {
 background: #188CE8;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
-transition: color 250ms 
+transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -330,7 +330,7 @@ display: flex;
 .team .social-link:hover,
 .team .social-link:focus {
   background-color: #2196f3;
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -340,7 +340,7 @@ display: flex;
 .team .social-link:hover .icon-link,
 .team .social-link:focus .icon-link {
   fill: #ffffff;
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons {
@@ -404,7 +404,7 @@ display: inline-block;
   color: #2196f3;
   border: 1px solid #2196f3;
   border-radius: 4px;
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer */
@@ -475,7 +475,7 @@ display: inline-block;
 .a-goin:hover,
 .a-goin:focus {
   background-color: #2196f3;
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 .a-goin {
@@ -518,7 +518,7 @@ display: inline-block;
 .project-list .project-text:hover, 
 .project-list .project-text:focus {
   color: #ffffff;
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-list {
@@ -581,26 +581,58 @@ display: inline-block;
 .project .hover-butoon:focus{
   color: #ffffff;
   background: #2196f3;
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .butoon-size {
   padding: 6px 22px;
 }
-.project-menu {
+.project-job .project-menu {
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin-right: 25px;
   margin-bottom: 30px;
   background: #FFFFFF;
 border: 1px solid #EEEEEE;
+position: relative;
+cursor: pointer;
+}
+.img-wrapper{
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.project-description{
+width: 370px;
+height: 294px;
+    padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  top: 1px;
+ transform: translateY(100%);
+ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.img-text{
+  font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0.03em;
+color: #FFFFFF;
+}
+
+.project-job .project-menu:hover .project-description,
+.project-job .project-menu:focus .project-description{
+  display: block;
+  transform: translateY(0);
+  transition: transform 250ms
+  cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-menu:hover,
 .project-menu:focus{
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
 0px 4px 4px rgba(0, 0, 0, 0.06), 
 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: color 250ms 
+  transition: 250ms 
   cubic-bezier(0.4, 0, 0.2, 1);
  }
 
@@ -642,24 +674,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   list-style: none;
   flex-wrap: wrap;
 }
-.img-wrapper{
-  position: relative;
-}
-.img-description{
-  background: rgba(33, 150, 243, 0.9);
-opacity: 0;
-position: absolute;
-bottom: 0;
-width: 100%;
-display: flex;
-justify-content: center;
-}
-.img-text{
-  font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-letter-spacing: 0.03em;
-color: #FFFFFF;
+.projact-img{
+  display: block;
 }
 
 /* address */
@@ -693,4 +709,52 @@ color: #FFFFFF;
 }
 .footer .list {
   margin-top: 20px;
+}
+
+/* modal*/
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 250ms, visibility 250ms;
+}
+
+.modal-backdrop.is-hidden .modal {
+  transform: rotate(-180deg);
+}
+
+.modal {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: transform 250ms linear;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.modal .close-sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
