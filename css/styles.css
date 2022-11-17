@@ -340,14 +340,15 @@ p {
 .team .social-link:hover,
 .team .social-link:focus {
   background-color: #2196f3;
+  color:#ffffff
 }
 
 .icon-link {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 .team .social-link:hover .icon-link,
 .team .social-link:focus .icon-link {
-  fill: #ffffff;
+  color:#ffffff ;
 }
 .social-icons {
   justify-content: center;
@@ -359,6 +360,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #afb1b8;
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: linear;
@@ -602,10 +604,9 @@ p {
 }
 .project-job .project-menu {
   flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-right: 25px;
+  margin-right: 30px;
   margin-bottom: 30px;
   background: #ffffff;
-  border: 1px solid #eeeeee;
   position: relative;
   cursor: pointer;
   
@@ -765,7 +766,6 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
-
 .is-hidden {
   visibility: hidden;
   opacity: 0;
